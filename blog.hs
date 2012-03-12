@@ -1,4 +1,4 @@
-{-# LANGUAGE OverloadedStrings, Arrows #-}
+{-# LANGUAGE OverloadedStrings #-}
 module Main where
 
 import Prelude hiding (id)
