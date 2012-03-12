@@ -67,7 +67,7 @@ main = hakyllWith config $ do
     match "index.html" $ route idRoute
     create "index.html" $ constA mempty
         >>> arr (setField "title" "Home")
-        >>> requireA "tags" (setFieldA "tags" (renderTagList'))
+        >>> requireA "tags" (setFieldA "tags" renderTagCloud')
         >>> setFieldPageList (take 3 . recentFirst)
                 "templates/postitem.html" "posts" "posts/*"
         >>> applyTemplateCompiler "templates/index.html"
@@ -108,8 +108,8 @@ main = hakyllWith config $ do
     -- End
     return ()
   where
-    renderTagList' :: Compiler (Tags String) String
-    renderTagList' = renderTagList tagIdentifier
+    renderTagCloud' :: Compiler (Tags String) String
+    renderTagCloud' = renderTagCloud tagIdentifier 70 180
 
     tagIdentifier :: String -> Identifier (Page String)
     tagIdentifier = fromCapture "tags/*"
