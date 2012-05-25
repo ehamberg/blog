@@ -2,11 +2,9 @@
 module Main where
 
 import Prelude hiding (id)
-import Control.Category (id)
 import Control.Monad (forM_)
-import Control.Arrow (arr, (>>>), (***), second)
-import Data.Monoid (mempty, mconcat)
-import qualified Data.Map as M
+import Control.Arrow (arr, (>>>))
+import Data.Monoid (mempty)
 
 import Hakyll
 
@@ -47,7 +45,7 @@ main = hakyllWith config $ do
     match "posts/*" $ do
         route   $ setExtension ".html"
         compile $ pageCompiler
-            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
+            >>> arr (renderDateField "date" "%e %B, %Y" "Date unknown")
             >>> renderTagsField "prettytags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post.html"
             >>> applyTemplateCompiler "templates/default.html"
@@ -66,9 +64,9 @@ main = hakyllWith config $ do
     -- Index
     match "index.html" $ route idRoute
     create "index.html" $ constA mempty
-        >>> arr (setField "title" "Home")
+        >>> arr (setField "title" "Erlend Hamberg")
         >>> requireA "tags" (setFieldA "tags" renderTagCloud')
-        >>> setFieldPageList (take 3 . recentFirst)
+        >>> setFieldPageList recentFirst
                 "templates/postitem.html" "posts" "posts/*"
         >>> applyTemplateCompiler "templates/index.html"
         >>> applyTemplateCompiler "templates/default.html"
@@ -88,7 +86,7 @@ main = hakyllWith config $ do
     match "templates/*" $ compile templateCompiler
 
     -- Render some static pages
-    forM_ ["contact.markdown", "cv.markdown", "links.markdown"] $ \p ->
+    forM_ ["about.markdown", "resume.markdown", "projects.markdown"] $ \p ->
         match p $ do
             route   $ setExtension ".html"
             compile $ pageCompiler

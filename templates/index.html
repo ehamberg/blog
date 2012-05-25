@@ -1,38 +1,4 @@
-<script type='text/javascript'>
-    $$(function() {
-        $$(".tweet").tweet({
-            username: "ehamberg",
-            avatar_size: null,
-            count: 3,
-            join_text: " - ",
-            loading_text: "Loading tweets..."
-        });
-    });
-</script>
-
 <div id="posts">
-    <h1>Recent posts</h1>
-    <ul>
-        $posts$
-    </ul>
-    <a type="application/rss+xml" href="/rss.xml"><img class="inline-image" style="vertical-align: middle" alt="rss feed" src="/images/rss.png" /></a>
-    &nbsp;
-    <a href="/posts.html">All posts...</a>
-    <p>
-        Tags: $tags$
-    </p>
-</div>
-
-<div id="twitter">
-    <h1>Twitter</h1>
-    <div class="tweet"> </div>
-    <a href="http://twitter.com/ehamberg">Follow me on twitter...</a>
-</div>
-
-<div>
-    <h1>I'm currently reading</h1>
-    <div id="ShelfariWidget209079">
-        <a href='http://www.shelfari.com/'>Shelfari: Book reviews on your book blog</a>
-        <script src="http://www.shelfari.com/ws/209079/widget.js?r=2848" type="text/javascript" language="javascript"></script>
-    </div>
+    <h1>Recent blog posts</h1>
+    $posts$
 </div>

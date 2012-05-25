@@ -2,12 +2,16 @@
     var disqus_developer = 1;
 </script>
 
-<h1>$title$</h1>
-<div class="tags">
-    Posted in: $prettytags$.
-</div>
+<h1 class="title">$title$</h1>
+<span id="date">$date$</span> Tagged: <span id="tags">$prettytags$.</span>
 
 $body$
+
+<div id="share-buttons">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="ehamberg">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <g:plusone size="medium" annotation="inline"></g:plusone>
+</div>
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
