@@ -12,7 +12,7 @@ Python and took 10 minutes to write (27 lines of code) by following [the
 excellent tutorial on
 techbase](http://techbase.kde.org/Development/Tutorials/Plasma/Python/GettingStarted).  
 
-![Google Calendar Plasmoid](/images/gcal_plasmoid.png)
+![Google Calendar Plasmoid](/images/gcal.png)
 
 You can download it here:
 [http://hamberg.no/erlend/files/gcal.zip](http://hamberg.no/erlend/files/gcal.zip).
