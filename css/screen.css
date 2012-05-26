@@ -4,6 +4,10 @@ html {
   background: #f8f8f8;
 }
 
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 h1.title {
   border-bottom: 2px solid #ddd;
   font-size: 30px;
