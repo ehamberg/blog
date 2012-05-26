@@ -41,4 +41,4 @@ and that also means that `*` always means “dereference”.
 ## Discussion
 
 - [r/programming](http://www.reddit.com/r/programming/comments/pz3n0/cc_pointer_declaration_syntax_it_makes_sense/)
-- [hacker news](http://news.ycombinator.com/item?id=3615750])
+- [hacker news](http://news.ycombinator.com/item?id=3615750)
