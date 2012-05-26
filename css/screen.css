@@ -4,6 +4,14 @@ html {
   background: #f8f8f8;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  color: #d44;
+}
+
 h1, h2, h3 {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
@@ -166,4 +174,23 @@ div.posttitle {
   margin: 0 0 0 11.5em;
   border-left: 1px solid black;
   padding: 0 1em 1em 1em;
+}
+
+#postinfo {
+  color: #ddd;
+}
+
+#postinfo a {
+  color: #ddd;
+}
+
+#postinfo a:hover {
+  color: #d44;
+}
+
+#date {
+}
+
+#tags {
+  float: right;
 }
