@@ -10,7 +10,7 @@ experiences from actual coders who learnt by doing. Peter Seibel's questions are
 really good -- no doubt because he himself is a programmer -- and his interview
 subject have different and interesting stories to tell.
 
-![](/images/monkey_tutor.png)
+!["The proof is trivial! Just biject it to a compact poset whose elements are thrice-differentiable DAGs"](/images/monkey_tutor.png)
 
 One of the things I found really interesting was how [Douglas
 Crockford](http://en.wikipedia.org/wiki/Douglas_Crockford) recommended *code

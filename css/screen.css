@@ -93,12 +93,12 @@ div.figure {
 }
 
 div.figure p.caption {
-	font-style: italic;
-}
-
-div.figure img {
-	border: 1px solid rgb(104,123,130);
-	border-radius: 0.5em;
+  font-style: italic;
+  background-color: #eee;
+  width: 80%;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin: auto;
 }
 
 pre {
