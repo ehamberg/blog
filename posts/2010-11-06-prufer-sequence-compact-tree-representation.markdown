@@ -1,5 +1,5 @@
 ---
-title: Prüfer Sequence -- Compact Tree Representation
+title: Prüfer Sequence – Compact Tree Representation
 description: A clever, compact way of representing trees
 tags: programming, python
 ---

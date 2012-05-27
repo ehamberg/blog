@@ -1,5 +1,5 @@
 ---
-title: Kate's Vi Input Mode -- What will KDE 4.4 bring?
+title: Kate's Vi Input Mode – What will KDE 4.4 bring?
 description: What is new in the Vi input mode for Kate in KDE 4.4?
 tags: kate, kde, programming
 ---
