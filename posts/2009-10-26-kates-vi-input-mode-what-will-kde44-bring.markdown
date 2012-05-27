@@ -14,7 +14,7 @@ bugs fixed since 4.3, but some major new features have also been introduced:
 
 This is something that I have been missing in Vim. The comma text object makes it easy to modify parameter lists in C-like languages and other comma separated lists. It is basically the area between two commas or between a comma and a bracket. In the line below, the three ranges this text object would cover is highlighted in red.
 
-![Comma text object ranges. If the cursor is over, say, "arg2", pressing `ci,`  ("change inner comma") would delete "double arg2" and place the cursor between the two commas in insert mode. A very convenient way to change a function's parameter](/images/comma_to.png")
+![Comma text object ranges. If the cursor is over, say, "arg2", pressing `ci,`  ("change inner comma") would delete "double arg2" and place the cursor between the two commas in insert mode. A very convenient way to change a function's parameter](/images/comma_to.png)
 
 This has actually been in Kate's Vi Mode for a while now, but since it has not been announced until now, I guess I am the only one using it. :-)
 
