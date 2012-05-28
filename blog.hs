@@ -2,8 +2,9 @@
 module Main where
 
 import Prelude hiding (id)
+import Control.Category (id)
 import Control.Monad (forM_)
-import Control.Arrow (arr, (>>>))
+import Control.Arrow (arr, (>>>), (&&&), (>>^))
 import Data.Monoid (mempty)
 
 import Hakyll
@@ -86,12 +87,19 @@ main = hakyllWith config $ do
     match "templates/*" $ compile templateCompiler
 
     -- Render some static pages
-    forM_ ["404.md", "about.md", "resume.md", "projects.md"] $ \p ->
+    forM_ ["about.md", "resume.md", "projects.md"] $ \p ->
         match p $ do
             route   $ setExtension ".html"
             compile $ pageCompiler
                 >>> applyTemplateCompiler "templates/default.html"
                 >>> relativizeUrlsCompiler
+
+    -- Render the 404 page, relativize URLs to /erlend to make sure this will work everywhere
+    match "404.md" $ do
+        route  $ setExtension ".html"
+        compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/default.html"
+            >>> relativizeUrlsTo "/erlend"
 
     -- Render RSS feed
     match "rss.xml" $ route idRoute
@@ -130,3 +138,9 @@ feedConfiguration = FeedConfiguration
     , feedAuthorName  = "Erlend Hamberg"
     , feedRoot        = "http://hamberg.no/erlend/blog"
     }
+
+relativizeUrlsTo :: String -> Compiler (Page String) (Page String)
+relativizeUrlsTo base = getRoute &&& id >>^ uncurry relativize
+  where
+    relativize Nothing  = id
+    relativize (Just r) = fmap (relativizeUrls base)
