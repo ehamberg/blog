@@ -128,10 +128,10 @@ config = defaultHakyllConfiguration
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "Erλend's hjem i skyene"
+    { feedTitle       = "Erlend Hamberg"
     , feedDescription = "Personal blog of Erlend Hamberg"
     , feedAuthorName  = "Erlend Hamberg"
-    , feedRoot        = "http://hamberg.no/erlend/blog"
+    , feedRoot        = "http://hamberg.no/erlend/"
     }
 
 relativizeUrlsTo :: String -> Compiler (Page String) (Page String)
