@@ -86,7 +86,7 @@ main = hakyllWith config $ do
     match "templates/*" $ compile templateCompiler
 
     -- Render some static pages
-    forM_ ["404.markdown", "about.markdown", "resume.markdown", "projects.markdown"] $ \p ->
+    forM_ ["404.md", "about.md", "resume.md", "projects.md"] $ \p ->
         match p $ do
             route   $ setExtension ".html"
             compile $ pageCompiler
