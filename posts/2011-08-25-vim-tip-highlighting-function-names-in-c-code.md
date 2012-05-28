@@ -1,7 +1,7 @@
 ---
 title: Vim tip: Highlight Function Names in C Code
 description: Neat Vim trick
-tags: c, programming, Vim
+tags: c, programming, vim
 ---
 
 When looking at function signatures such as

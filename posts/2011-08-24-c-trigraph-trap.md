@@ -1,7 +1,7 @@
 ---
 title: C Trigraph Trap
 description: How “??/” can lead to disaster
-tags: c, Programming
+tags: c, programming
 ---
 
 ~~~{.cpp}
