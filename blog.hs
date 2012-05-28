@@ -27,11 +27,6 @@ main = hakyllWith config $ do
         route   idRoute
         compile copyFileCompiler
 
-    -- Copy files (deep)
-    match "files/**" $ do
-        route idRoute
-        compile copyFileCompiler
-
     -- Compress CSS
     match "css/*" $ do
         route idRoute
