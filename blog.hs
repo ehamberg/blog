@@ -120,7 +120,7 @@ makeTagList tag posts =
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration
-    { deployCommand = "rsync -cav _site/* ehamberg@hamberg.no:Webdocs/blog/"
+    { deployCommand = "rsync -cav _site/* hamberg.no:www/"
     }
 
 feedConfiguration :: FeedConfiguration
