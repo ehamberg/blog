@@ -146,7 +146,7 @@ tr.post-entry > td {
 }
 
 tr.post-entry .post-title {
-  vertical-align: center;
+  vertical-align: middle;
   padding-left: 10px;
 }
 
