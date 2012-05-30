@@ -21,5 +21,5 @@ tabeller over hvordan en tiltaler alt fra forretningsforbindelser til venner.
 Teksten er noe kuttet enkelte steder i forhold til nettsiden for å få den til å
 passe på to sider.
 
-<table><tr valign="center"><td><img border="0" title="application-pdf32" src="../application-pdf32.png" alt="application-pdf32" width="32" height="32" /></td><td><span style="font-size: 26px; color: blue;">[emails_and_letters.pdf](http://hamberg.no/erlend/files/emails_and_letters.pdf)</td></span>
+<table><tr valign="center"><td><img border="0" title="application-pdf32" src="../images/application-pdf32.png" alt="application-pdf32" width="32" height="32" /></td><td><span style="font-size: 26px; color: blue;">[emails_and_letters.pdf](http://hamberg.no/erlend/files/emails_and_letters.pdf)</td></span>
 </tr></table>
