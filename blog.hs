@@ -123,7 +123,7 @@ makeTagList tag posts =
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration
-    { deployCommand = "rsync -cav _site/* hamberg.no:www/"
+    { deployCommand = "rsync -cav --delete _site/* hamberg.no:www/"
     }
 
 feedConfiguration :: FeedConfiguration
