@@ -9,7 +9,7 @@ GPU.
 
 When not writing C code for work I like to play around with
 [Haskell](http://www.haskell.org) and various other technologies. See my
-[projects](/projects) page for an overview.
+[projects](/projects.html) page for an overview.
 
 e-mail
 :   **ehambergαgmail.com**
