@@ -4,7 +4,7 @@ description: The original goals set for Kate's Vi input mode are now completed
 tags: gsoc, kate, programming
 ---
 
-<div style="border: 1px solid black; margin: 0pt auto -1px; padding: 1em; background-color: #eeeeee; width: 50%; text-align: center;">Please see [http://hamberg.no/erlend/kate-vi-mode/](http://hamberg.no/erlend/kate-vi-mode/) for an updated overview of the Kate VI mode project.</div>
+<div style="border: 1px solid black; margin: 0pt auto -1px; padding: 1em; background-color: #eeeeee; width: 50%; text-align: center;">Please see [http://kate-editor.org/kate-vi-mode/](http://kate-editor.org/kate-vi-mode/) for an updated overview of the Kate VI mode project.</div>
 
 I just marked the Vi input mode ("V.I.M."? :) ) for the Kate kpart as done in
 the feature plan for [KDE
