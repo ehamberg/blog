@@ -26,23 +26,23 @@ width  = 80 :: Int
 height = 60 :: Int
 
 -- takes a two-dimensional list and returns the neighbours of (x,y)
-neighbours :: [[a]] -&gt; (Int,Int) -&gt; [a]
-neighbours m (x,y) = map (\\(x',y') -&gt; m !! y' !! x') $ filter valid neighbours'
+neighbours :: [[a]] -> (Int,Int) -> [a]
+neighbours m (x,y) = map (\\(x',y') -> m !! y' !! x') $ filter valid neighbours'
     where height'       = length m
           width'        = length (head m)
-          valid (x',y') = x' &gt;= 0 &amp;&amp; x' &lt; width' &amp;&amp; y' &gt;= 0 &amp;&amp; y' &lt; height'
+          valid (x',y') = x' >= 0 && x' < width' && y' >= 0 && y' < height'
           neighbours'   = [(x-1,y-1),(x,y-1),(x+1,y-1), -- neighbours over
                            (x-1,y),(x+1,y),             -- neighbours left/right
                            (x-1,y+1),(x,y+1),(x+1,y+1)] -- neighbours under
 
 -- updates all cells according to the rules in liveOrDead
-update :: IORef [[Bool]] -&gt; IO ()
+update :: IORef [[Bool]] -> IO ()
 update c = do
-    cells &lt;- readIORef c
+    cells <- readIORef c
 
-    let coords = [(x,y) | y &lt;- [0..(height-1)], x &lt;- [0..(width-1)]]
+    let coords = [(x,y) | y <- [0..(height-1)], x <- [0..(width-1)]]
 
-    nextGen &lt;- mapM (\\(x,y) -&gt; do
+    nextGen <- mapM (\\(x,y) -> do
             let cell = cells !! y !! x
             let ns   = neighbours cells (x,y)
             return $ liveOrDead cell ((length . filter id) ns)
@@ -53,17 +53,17 @@ update c = do
 
 -- survival rule: a live cell only lives on if it has 2 or 3 live neighbours
 -- birth rule: a dead cell becomes a live cell if it has 3 live neighbours
-liveOrDead :: Bool -&gt; Int -&gt; Bool
+liveOrDead :: Bool -> Int -> Bool
 liveOrDead True nLive = nLive `elem` [2,3]
 liveOrDead False nLive = nLive == 3
 
 -- utility function: split a list into sublists of length n
-nLists :: Int -&gt; [a] -&gt; [[a]]
+nLists :: Int -> [a] -> [[a]]
 nLists _ [] = []
 nLists n ls = take n ls : nLists n (drop n ls)
 
 -- utility function: draws a square at (x,y) with size w×h
-drawQuad :: GLdouble -&gt; GLdouble -&gt; GLdouble -&gt; GLdouble -&gt; IO ()
+drawQuad :: GLdouble -> GLdouble -> GLdouble -> GLdouble -> IO ()
 drawQuad x y w h =
     renderPrimitive Quads $ do
         vertex (Vertex3  x     y    0)
@@ -72,14 +72,14 @@ drawQuad x y w h =
         vertex (Vertex3  x    (y-h) 0)
 
 -- draw each cell as a coloured square
-display :: IORef [[Bool]] -&gt; IO ()
+display :: IORef [[Bool]] -> IO ()
 display c = do
-    cells &lt;- readIORef c
+    cells <- readIORef c
 
     let h = fromIntegral height
     let w = fromIntegral width
 
-    mapM_ (\\(n,b) -&gt; do
+    mapM_ (\\(n,b) -> do
         if b
           then currentColor $= Color4 1.0 0.8 0.6 1.0
           else currentColor $= Color4 0.4 0.5 0.4 1.0
@@ -92,13 +92,13 @@ display c = do
 
 main :: IO ()
 main = do
-    g &lt;- newStdGen
-    _ &lt;- getArgsAndInitialize
+    g <- newStdGen
+    _ <- getArgsAndInitialize
 
     -- random starting values
-    cells &lt;- newIORef ((nLists width . take (width*height) . randoms) g)
+    cells <- newIORef ((nLists width . take (width*height) . randoms) g)
 
-    _ &lt;- createWindow "Conway's Game of Life"
+    _ <- createWindow "Conway's Game of Life"
     initialDisplayMode    $= [DoubleBuffered]
     windowSize            $= Size 800 600
     displayCallback       $= display cells

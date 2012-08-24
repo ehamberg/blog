@@ -22,7 +22,7 @@ This has actually been in Kate's Vi Mode for a while now, but since it has not b
 
 It is now possible to add mappings in normal mode (**:nnoremap** in Vim). There
 are still some flaws, such as the fact that one cannot map a keypress to
-"**:somecommand&lt;enter&gt;**", but hopefully people who are using
+"**:somecommand<enter>**", but hopefully people who are using
 dvorak/colemake can make use of the vi mode now.
 
 ![It is now possible to map keypresses in normal mode](/images/mapping.png)
