@@ -8,8 +8,6 @@ After the positive feedback on my [quick 27 line python hack](http://hamberg.no/
 
 ![](/images/gcal2.png)
 
-![](/images/gcal2_settings.png)
-
 It's not a simple, 27 line python script any more, but now it's much more usable. (unless there are some stupid bugs I have overlooked. :))
 
 As suggested I uploaded it to [KDE
