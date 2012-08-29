@@ -28,6 +28,10 @@ has at most $\lceil\lg(n+1)\rceil$ terms.
 We thus have $O(\lg n)$ time to find the right tree in the list of trees and
 $O(\lg n)$ time to find the requested node in the tree.
 
+Okasaki goes on tho show that the worst-case time for lookups/updates is
+actually $O(min\{i,\lg n\})$ -- meaning that these random-access lists are never
+less efficient -- and further that the expected time is $O(i)$.
+
 The following Haskell implementation mirrors closely the Stanard ML
 implementation in Okasaki's paper.
 
