@@ -1,7 +1,7 @@
 ---
 title: Programming Praxis: Hash Table With Open Addressing
 description: Hask table with open addressing and deletion
-tags: algorithms, haskell
+tags: algorithms, haskell, programming praxis
 ...
 
 Today's [Programming Praxis
