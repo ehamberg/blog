@@ -131,6 +131,7 @@ feedConfiguration = FeedConfiguration
     { feedTitle       = "Erlend Hamberg"
     , feedDescription = "Personal blog of Erlend Hamberg"
     , feedAuthorName  = "Erlend Hamberg"
+    , feedAuthorEmail = ""
     , feedRoot        = "http://hamberg.no/erlend/"
     }
 
