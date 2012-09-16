@@ -23,7 +23,7 @@ the changelog for the [rc1 release of git
 1.7.12](http://git-blame.blogspot.co.uk/2012/07/git-1712-rc1.html), these tricks
 will finally be made obsolete with the new `--root` switch:
 
-    $ git --rebase -i --root
+    $ git rebase -i --root
 
 This will allow you to correct that annoying typo in your "new amazing porject"
 before you push it to github for the world to see.
