@@ -14,8 +14,8 @@ techbase](http://techbase.kde.org/Development/Tutorials/Plasma/Python/GettingSta
 
 ![Google Calendar Plasmoid](/images/gcal.png)
 
-You can download it here:
-[http://hamberg.no/erlend/files/gcal.zip](http://hamberg.no/erlend/files/gcal.zip).
+You can download it ~~here:
+[http://hamberg.no/erlend/files/gcal.zip](http://hamberg.no/erlend/files/gcal.zip)~~[at kde-look](http://kde-look.org/content/show.php/Google+Calender+-+Coming+Events?content=104182).
 If you improve it or make another Google Calendar plasmoid: let me know! :)
 
 Oh, btw. To install it run `plasmapkg -i gcal.zip`.
