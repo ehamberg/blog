@@ -3,6 +3,17 @@
 Here are some of the projects I work on. A more comprehensive list is available
 on my [github accout](https://github.com/ehamberg/).
 
+## Circus Escape
+
+A simple iPhone platform game where the aim is to get as far as possible on a
+unicycle while avoiding obstacles.
+
+![Circus Escape screenshot](images/circusescape.png)
+
+<div style="text-align: center; margin-top: 1em;">
+[![](images/appstore.png)](http://itunes.apple.com/us/app/circus-escape/id554468356)
+</div>
+
 ## vim-cute-python
 
 A python syntax file for Vim that uses the new "conceal" feature in Vim 7.3 to
