@@ -12,7 +12,7 @@ his 1995 paper[^okasaki1995].
 Okasaki's random-access list preserves the $O(1)$ time guarantee of standard
 lists of the primitive list operations `head`, `cons`, `tail` while adding the
 possibility to access or update elements at a given index in $O(\lg n)$ time.
-(There operations are $O(i)$ on standard lists where $i$ is the index.)
+(These operations are $O(i)$ on standard lists, where $i$ is the index.)
 
 This is done by maintaining a list of complete binary trees -- i.e. trees where
 all nodes are leaves or have exactly two children. The nodes are stored in
