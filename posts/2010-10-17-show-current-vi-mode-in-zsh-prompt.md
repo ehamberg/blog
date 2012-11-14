@@ -20,8 +20,12 @@ function zle-keymap-select {
  zle reset-prompt
 }
 
-zle -N zle-keymap-selec</pre>
-You can then add $VIMODE to your prompt:
+zle -N zle-keymap-select
+~~~
+
+You can then add `$VIMODE` to your prompt:
+
+~~~{.bash}
 # Set the prompt to “[user]@[host[ [vi mode] $ ”
 PROMPT="%n@%m ${VIMODE} \\$ "
 ~~~
