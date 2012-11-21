@@ -8,7 +8,7 @@ Two days ago in this
 [patch](https://github.com/yesodweb/yesod/commit/244eb88f3630c16c3db41ac942c1a8927940cfe1),
 the
 [`handlerToIO`](http://hackage.haskell.org/packages/archive/yesod-core/1.1.1/doc/html/Yesod-Handler.html#g:16)
-function was added to Yesod. Yesod 1.1.1 which was just released contains this
+function was added to Yesod. Version 1.1.1 which was just released contains this
 new function.
 
 `handlerToIO` allows you to `GHandler` actions inside `IO`.  A neat use case for
