@@ -15,9 +15,9 @@ empty cells as `Nil` or `Deleted`. By doing this we can detect cells that
 previously had an item there and thus continue searching in cases where a
 deletion in the middle of a sequence of items with the same hash has occurred.
 
-To avoid infinite loop when inserting into a full table or deleting for a table
-filled with `Deleted` cells, both `insert` and `delete`'s helper functions are
-passed an `end` parameter that indicates when all elements have been looped
+To avoid an infinite loop when inserting into a full table or deleting from a
+table filled with `Deleted` cells, both `insert` and `delete`'s helper functions
+are passed an `end` parameter that indicates when all elements have been looped
 over.
 
 ```haskell
