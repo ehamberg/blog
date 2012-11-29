@@ -29,4 +29,4 @@ days. :)
 
 [^1]: I do *not* approve of this practice. :-)
 [^2]: The entire workflow is 1) `git add -p`, 2) `git stash --keep-index`, 3) run the
-test, 4) `git stash pop`, 5) `goto` 1
+test, 4) `git stash pop`, 5) `goto 1`
