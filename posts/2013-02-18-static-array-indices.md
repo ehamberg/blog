@@ -25,7 +25,7 @@ But, you can actually also use the keyword `static` between the brackets [^1]:
 void bar(int myArray[static 10]);
 ```
 
-This tells the compiler that it should assume that the array passed to `foo` has
+This tells the compiler that it should assume that the array passed to ~~foo~~`bar` has
 *at least* 10 elements. (Note that this rules out a `NULL` pointer!)
 
 Doing this serves two purposes:
