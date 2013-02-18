@@ -35,7 +35,7 @@ Doing this serves two purposes:
   anything but an array of 10 or more `int`s.
 
 So, let's see what actually happens when compiling a program with the above
-definition of `bar` when passing the following three arguments [^3] to it:
+definition of `bar` when passing the following three arguments to it [^3]:
 
 - Passing `NULL`:
 
