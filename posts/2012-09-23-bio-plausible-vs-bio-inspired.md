@@ -99,7 +99,7 @@ model a biological immune system, but merely draws inspiration from its
 high-level concepts. One factor they explicitly mention is left out cell--cell
 interaction.
 
-CLONALG is thus clearly a bio-inspired algorithm. The questions it then: Would
+CLONALG is thus clearly a bio-*inspired* algorithm. The questions it then: Would
 the algorithm perform better if more effort were put into making it more
 bio-plausible? The authors does not explicitly discuss this, but I believe the
 answer is no. When implementing an algorithm such as CLONALG for a specific
@@ -109,8 +109,8 @@ found in the immune system nor the infinite parallelism resulting from these
 cells' independence. However, this is not necessarily a weakness; by
 familiarity with the problem, the programmer will be able to take the best
 “shortcuts”. Will the program often see identical objects? “Cheat” by storing
-the exact signatures. Will it rarely see the same item twice? Test whether
-reducing the importance of “memory”.
+the exact signatures. Will it rarely see the same item twice? Check if reducing
+the importance of “memory” helps.
 
 Evolutions has tuned nature's “algorithms” to their specific usage areas; if
 one wants to do something different we should in many cases expect it to be
