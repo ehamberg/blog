@@ -4,6 +4,10 @@ description: Suggestions on how to improve Github's notifications
 tags: github
 ---
 
+> Update: Github now *has* a way to just "star" a repository, without following
+> it:
+> [github.com/blog/1204-notifications-stars](https://github.com/blog/1204-notifications-stars)
+
 I often get excited about new projects quite early, often after seeing them
 being mentioned on Hacker news or by seeing my friends' activity on Github.
 These projects are frequently in the "promising, but not yet stable" category
