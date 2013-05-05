@@ -76,8 +76,8 @@ LaTeX editor](http://kile.sourceforge.net/) and various other programs.
 
 This started as a [Google Summer of Code](http://code.google.com/soc/) project
 in 2008 and I have maintained it since. I mentored Svyatoslav Kuzmich that
-worked on the project as a GSoC student in 2011 and am mentoring Vegard Øye this
-summer (2012).
+worked on the project as a GSoC student in 2011 and Vegard Øye who worked on it
+in 2012.
 
 - [The Kate editor](http://kate-editor.org/)
 - [Various blog posts about my work on Kate](/tags/kate.html)
