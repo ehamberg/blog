@@ -61,7 +61,7 @@ A simple framework for writing evolutionary algorithms in Haskell.
 - [Code](https://github.com/ehamberg/simpleea)
 - [Documentation](http://hackage.haskell.org/package/SimpleEA)
 
-## GTD Guide: GTD in 15 minutes
+## Guide: GTD in 15 minutes
 
 A pragmatic guide to the "Getting Things Done" framework. Written in Markdown.
 
