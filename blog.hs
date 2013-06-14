@@ -3,7 +3,7 @@ import Data.Monoid ((<>))
 import Hakyll
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith conf $ do
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
     match "images/*" $ do
@@ -90,3 +90,8 @@ feedConfiguration = FeedConfiguration
     , feedAuthorEmail = ""
     , feedRoot        = "http://hamberg.no/erlend"
     }
+
+conf :: Configuration
+conf = defaultConfiguration
+           { deployCommand = "rsync -cav _site/* hamberg.no:www/"
+           }
