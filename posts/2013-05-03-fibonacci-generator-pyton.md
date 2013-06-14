@@ -45,7 +45,8 @@ not even a list, after all). So, let have the generator have two versions of
 itself, drop one element from one of them and then have the (outer) generator
 yield the sum of the next items from its two inner generators, ad infinitum.
 
-So, Pythonistas; why is this dog slow? :-)
+However, these two inner generators will have their own generators, and so on,
+so this will be dog slow.
 
 (Yes, yes, the way it should *actually* be done is to just keep track of the two
 previous *values*.)
