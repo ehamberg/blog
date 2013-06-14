@@ -1,12 +1,11 @@
 build:
 	runhaskell blog.hs build
 
-preview: build
+preview:
 	runhaskell blog.hs preview
 
-deploy: build
+deploy:
 	runhaskell blog.hs deploy
 
 clean:
-	rm -rf _site/*
-	rm -rf _cache/*
+	runhaskell blog.hs clean
