@@ -1,142 +1,92 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Main where
-
-import Prelude hiding (id)
-import Control.Category (id)
-import Control.Monad (forM_)
-import Control.Arrow (arr, (>>>), (&&&), (>>^))
-import Data.Monoid (mempty)
-
+import Data.Monoid ((<>))
 import Hakyll
 
--- | Entry point
---
 main :: IO ()
-main = hakyllWith config $ do
-    -- Copy images
+main = hakyll $ do
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
     match "images/*" $ do
         route idRoute
         compile copyFileCompiler
 
-    match "favicon.ico" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    -- Copy JavaScript
-    match "js/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    -- Compress CSS
     match "css/*" $ do
         route idRoute
         compile compressCssCompiler
 
-    -- Render the /tmp index page
-    match "tmp/index.html" $ do
-        route idRoute
-        compile $ readPageCompiler >>> relativizeUrlsCompiler
+    match (fromList ["about.md", "contact.md", "projects.md"]) $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
-    -- Render each and every post
     match "posts/*" $ do
-        route   $ setExtension ".html"
-        compile $ pageCompiler
-            >>> arr (renderDateField "date" "%e %B, %Y" "Date unknown")
-            >>> renderTagsField "prettytags" (fromCapture "tags/*")
-            >>> applyTemplateCompiler "templates/post.html"
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/post.html"    (postCtx tags)
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/default.html" (postCtx tags)
+            >>= relativizeUrls
 
-    -- Post list
-    match "posts.html" $ route idRoute
-    create "posts.html" $ constA mempty
-        >>> arr (setField "title" "Posts")
-        >>> setFieldPageList recentFirst
-                "templates/postitem.html" "posts" "posts/*"
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+    -- Post tags
+    tagsRules tags $ \tag pattern -> do
+        let title = "Posts tagged " ++ tag
 
-    -- Index
-    match "index.html" $ route idRoute
-    create "index.html" $ constA mempty
-        >>> arr (setField "title" "Erlend Hamberg")
-        >>> requireA "tags" (setFieldA "tags" renderTagCloud')
-        >>> setFieldPageList recentFirst
-                "templates/postitem.html" "posts" "posts/*"
-        >>> applyTemplateCompiler "templates/index.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+        -- Copied from posts, need to refactor
+        route idRoute
+        compile $ do
+            list <- postList tags pattern recentFirst
+            let ctx = constField "title" title
+                      <> constField "posts" list
+                      <> defaultContext
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/posts.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
-    -- Tags
-    create "tags" $
-        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
+    create ["rss.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx tags <> bodyField "description"
+            posts <- fmap (take 10) . recentFirst
+                         =<< loadAllSnapshots "posts/*" "content"
+            renderRss feedConfiguration feedCtx posts
 
-    -- Add a tag list compiler for every tag
-    match "tags/*" $ route $ setExtension ".html"
-    metaCompile $ require_ "tags"
-        >>> arr tagsMap
-        >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
+    match "index.html" $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll "posts/*"
+            let indexCtx =
+                    listField "posts" (postCtx tags) (return posts)
+                        <> constField "title" "Home"
+                        <> defaultContext
 
-    -- Read templates
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= relativizeUrls
+
     match "templates/*" $ compile templateCompiler
 
-    -- Render some static pages
-    forM_ ["about.md", "resume.md", "projects.md"] $ \p ->
-        match p $ do
-            route   $ setExtension ".html"
-            compile $ pageCompiler
-                >>> applyTemplateCompiler "templates/default.html"
-                >>> relativizeUrlsCompiler
 
-    -- Render the 404 page, relativize URLs to /erlend to make sure this will work everywhere
-    match "404.md" $ do
-        route  $ setExtension ".html"
-        compile $ pageCompiler
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsTo "/erlend"
+postCtx :: Tags -> Context String
+postCtx tags = modificationTimeField "mtime" "%U"
+                   <> dateField "date" "%e %B, %Y"
+                   <> tagsField "prettytags" tags
+                   <> defaultContext
 
-    -- Render RSS feed
-    match "rss.xml" $ route idRoute
-    create "rss.xml" $ requireAll_ "posts/*" >>> renderRss feedConfiguration
-
-    -- End
-    return ()
-  where
-    renderTagCloud' :: Compiler (Tags String) String
-    renderTagCloud' = renderTagCloud tagIdentifier 70 180
-
-    tagIdentifier :: String -> Identifier (Page String)
-    tagIdentifier = fromCapture "tags/*"
-
-makeTagList :: String
-            -> [Page String]
-            -> Compiler () (Page String)
-makeTagList tag posts =
-    constA posts
-        >>> pageListCompiler recentFirst "templates/postitem.html"
-        >>> arr (copyBodyToField "posts" . fromBody)
-        >>> arr (setField "title" ("Posts tagged " ++ tag))
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
-
-config :: HakyllConfiguration
-config = defaultHakyllConfiguration
-    { deployCommand = "rsync -cav _site/* hamberg.no:www/"
-    }
+postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
+         -> Compiler String
+postList tags pattern preprocess' = do
+    postItemTpl <- loadBody "templates/postitem.html"
+    posts <- preprocess' =<< loadAll pattern
+    applyTemplateList postItemTpl (postCtx tags) posts
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
     { feedTitle       = "Erlend Hamberg"
-    , feedDescription = "Personal blog of Erlend Hamberg"
+    , feedDescription = "Personal Blog of Erlend Hamberg"
     , feedAuthorName  = "Erlend Hamberg"
     , feedAuthorEmail = ""
-    , feedRoot        = "http://hamberg.no/erlend/"
+    , feedRoot        = "http://hamberg.no/erlend"
     }
-
-relativizeUrlsTo :: String -> Compiler (Page String) (Page String)
-relativizeUrlsTo base = getRoute &&& id >>^ uncurry relativize
-  where
-    relativize Nothing  = id
-    relativize (Just r) = fmap (relativizeUrls base)
