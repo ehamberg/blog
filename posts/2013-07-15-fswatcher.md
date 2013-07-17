@@ -4,9 +4,10 @@ description: A simple program for running a command on file changes
 tags: haskell, programming
 ---
 
-`fswatcher` is a small utility I have written to have a program that runs a
-given command when a file or a directory is modified and that will work on both
-OS X and Linux. (It should also work on Windows, but I haven't tested.)
+[`fswatcher`](http://hackage.haskell.org/package/fswatcher) is a small utility I
+have written to have a program that runs a given command when a file or a
+directory is modified and that will work on both OS X and Linux. (It should also
+work on Windows, but I haven't tested.)
 
 I have just uploaded it to Hackage, so it should be possible to install with
 `cabal install fswatcher`.
