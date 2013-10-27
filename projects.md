@@ -3,7 +3,7 @@
 Here are some of the projects I work on. A more comprehensive list is available
 on my [github accout](https://github.com/ehamberg/).
 
-## [RSSQueue.com](http://rssqueue.com)
+## RSSQueue.com
 
 RSSQueue is a service that lets you create and curate RSS/podcast feeds that can
 be synced to tablets or phones. This lets you create a “watch it later” list
