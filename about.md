@@ -13,7 +13,7 @@ technologies. See my [projects](/projects.html) page for an overview.
 e-mail
 :   **ehambergαgmail.com**
 twitter
-:   [@ehamberg](http://twitter.com/ehamberg)
+:   [\@ehamberg](http://twitter.com/ehamberg)
 github
 :   [github.com/ehamberg](http://github.com/ehamberg)
 linkedin
