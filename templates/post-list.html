@@ -1,11 +1,11 @@
-<ul>
-    $for(posts)$
-		<div class="postdate">
+$for(posts)$
+<div class="row postitem">
+		<div class="col-xs-4 postdate">
 			$date$
 		</div>
-		<div class="posttitle">
+		<div class="col-xs-8 posttitle">
 			<a href="$url$">$title$</a><br />
 			$description$
 		</div>
-    $endfor$
-</ul>
+</div>
+$endfor$
