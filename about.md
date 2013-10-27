@@ -16,3 +16,5 @@ twitter
 :   [@ehamberg](http://twitter.com/ehamberg)
 github
 :   [github.com/ehamberg](http://github.com/ehamberg)
+linkedin
+:   [no.linkedin.com/in/ehamberg/](http://no.linkedin.com/in/ehamberg/)
