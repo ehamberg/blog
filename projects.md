@@ -81,3 +81,22 @@ in 2012.
 
 - [The Kate editor](http://kate-editor.org/)
 - [Various blog posts about my work on Kate](/tags/kate.html)
+
+## E-book version of the *Typeclassopedia*
+
+A [Pandoc Markdown](http://johnmacfarlane.net/pandoc/) version of Brent Yorgey's
+[Typeclassopedia](http://www.haskell.org/haskellwiki/Typeclassopedia), allowing
+one to create an EPUB version. Having a “real” e-book means that you can
+comfortably read it on an e-book reader and highlight text and take notes while
+reading.
+
+The EPUB file can be downloaded from Github:
+
+<https://github.com/ehamberg/typeclassopedia-md/releases>
+
+The Markdown source is also available in that repo and you can of course
+use Pandoc to convert the Markdown file to all the other output formats
+Pandoc supports.
+
+By using a program like [Calibre](http://calibre-ebook.com), the EPUB file can
+be converted to other e-book formats such as the Kindle format.
