@@ -147,12 +147,13 @@ div.postdate {
 
 div.posttitle {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  border-left: 1px solid black;
+  border-left: 1px solid #ddd;
   padding-top: 0.5em;
 }
 
 #postinfo {
   color: #ddd;
+  margin-bottom: 1em;
 }
 
 #postinfo a {
