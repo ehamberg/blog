@@ -28,6 +28,13 @@ main = hakyllWith conf $ do
             >>= loadAndApplyTemplate "templates/default.html" (postCtx tags)
             >>= relativizeUrls
 
+    match "drafts/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/default.html" (postCtx tags)
+            >>= relativizeUrls
+
     -- Post tags
     tagsRules tags $ \tag pattern -> do
         let title = "Posts tagged " ++ tag
