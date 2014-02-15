@@ -21,6 +21,8 @@ for a in {$HOME,}/Applications/*.app ; do
 done
 ```
 
+The `${${a:t:r:l}//[ -]/}` part will turn a string like `/Applications/Xcode51-Beta5.app` into `xcode51beta5` by removing the directory part (`:t`), removing the suffix (`:r`), lowercasing it (`:l`) and then finally removing dashes (`//[ -]//`). `${(qq)a}` will quote the app path.
+
 The generated functions will look like this:
 
     $ which pixelmator
@@ -33,6 +35,4 @@ The generated functions will look like this:
     	fi
     }
 
-The `${${a:t:r:l}//[ -]/}` part will turn a string like `/Applications/Xcode51-Beta5.app` into `xcode51beta5` by removing the directory part (`:t`), removing the suffix (`:r`), lowercase it (`:l`) and then finally remove dashes (`//[ -]//`). `${(qq)a}` will quote the app path.
-
-If someone creates a bash version, I'd be happy to add that too.
+(If someone creates a bash version, I'd be happy to add that too.)
