@@ -1,5 +1,5 @@
 ---
-title: Classes are a Dumping Ground for Language Features
+title: Classes are a dumping ground for language features
 description: When classes are the only structuring mechanism, they tend to accumulate features
 tags: programming
 ...
