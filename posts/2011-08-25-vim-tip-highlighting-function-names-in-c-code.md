@@ -15,18 +15,15 @@ this can be quite slow. The following syntax definitions use a simple heuristic
 to highlight function names in C code by making their names boldface. In my
 experience it works quite well.
 
-~~~{.vim}
-" Highlight Function names.  From
-" http://stackoverflow.com/questions/736701/class-function-names-highlighting-in-vim/773392#773392
+(The original version came from [a stackoverflow
+answer](http://stackoverflow.com/questions/736701/class-function-names-highlighting-in-vim/773392#773392),
+but Albert Lee posted a better version in the comments.)
 
-syn match    cCustomParen    "(" contains=cParen contains=cCppParen
-syn match    cCustomFunc     "\w\+\s*(" contains=cCustomParen
-
-hi def link cCustomFunc  Function
-
-hi Function term=bold gui=bold
-view rawhighlight_functions.vimThis Gist brought to you by GitHub.
-~~~
+```vim
+" Highlight Function names
+syn match cCustomFunc /\w\+\s*(/me=e-1,he=e-1
+hi def link cCustomFunc Function
+```
 
 To use this, put it in `~/.vim/after/syntax/c/highlight_functions.vim`. (All
 files in `~/.vim/after/syntax/[filetype]/` will be sourced when vim opens a file
