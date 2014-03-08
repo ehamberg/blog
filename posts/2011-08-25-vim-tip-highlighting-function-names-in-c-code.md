@@ -20,9 +20,9 @@ answer](http://stackoverflow.com/questions/736701/class-function-names-highlight
 but Albert Lee posted a better version in the comments.)
 
 ```vim
-" Highlight Function names
-syn match cCustomFunc /\w\+\s*(/me=e-1,he=e-1
-hi def link cCustomFunc Function
+" Highlight all function names
+syntax match cCustomFunc /\w\+\s*(/me=e-1,he=e-1
+highlight def link cCustomFunc Function
 ```
 
 To use this, put it in `~/.vim/after/syntax/c/highlight_functions.vim`. (All
