@@ -6,7 +6,7 @@ tags: programming, ai
 
 While reading about cellular automata in preparation for an essay it struck me
 that I have never actually written [Conway's Game of
-Life](http://en.wikipedia.org/wiki/Conway's Game of Life). No, really!
+Life](http://en.wikipedia.org/wiki/Conway%27s Game of Life). No, really!
 
 To correct this embarrassing fact I quickly wrote a version in Haskell using the
 [GLUT bindings](http://hackage.haskell.org/package/GLUT).
