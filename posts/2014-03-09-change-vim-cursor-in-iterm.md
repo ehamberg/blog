@@ -23,7 +23,7 @@ endif
 
 A screenshot of how this looks:
 
-![iTerm2 vertical line cursor in Vim insert mode](/images/vim_cursors.png)
+![iTerm2 cursor in Vim's insert and normal mode](/images/vim_cursors.png)
 
 [^1]: Or `~/.vim/vimrc` which in Vim 7.4 was finally added as a possible
 `vimrc` location, making it possible to gather all vim-related files in
