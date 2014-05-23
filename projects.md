@@ -3,6 +3,18 @@
 Here are some of the projects I work on. A more comprehensive list is available
 on my [github accout](https://github.com/ehamberg/).
 
+## 9m.no
+
+9m.no is a URL^[Technically:
+[IRI](https://en.wikipedia.org/wiki/Internationalized_resource_identifier)]
+shortener that uses Unicode symbols to get really, short URLs. E.g.
+<http://9m.no/ብ易> → <http://reddit.com>. It was a quick hack and meant to be
+a (half) joke, but people really seems to like it.
+
+- [Link](http://9m.no)
+- [Code](https://github.com/ehamberg/9m)
+- [*Hacker News* discussion](https://news.ycombinator.com/item?id=7783239)
+
 ## RSSQueue.com
 
 RSSQueue is a service that lets you create and curate RSS/podcast feeds that can
