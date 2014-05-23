@@ -151,6 +151,10 @@ div.posttitle {
   padding-top: 0.5em;
 }
 
+#posts {
+  padding-bottom: 10px;
+}
+
 #postinfo {
   color: #ddd;
   margin-bottom: 1em;
