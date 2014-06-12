@@ -9,7 +9,7 @@ on my [github accout](https://github.com/ehamberg/).
 [IRI](https://en.wikipedia.org/wiki/Internationalized_resource_identifier)]
 shortener that uses Unicode symbols to get really, short URLs. E.g.
 <http://9m.no/ብ易> → <http://reddit.com>. It was a quick hack and meant to be
-a (half) joke, but people really seems to like it.
+a (half) joke, but people really seem to like it.
 
 - [Link](http://9m.no)
 - [Code](https://github.com/ehamberg/9m)
