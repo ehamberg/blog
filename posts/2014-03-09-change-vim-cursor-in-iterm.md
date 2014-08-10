@@ -4,7 +4,7 @@ description: In iTerm2 it's possible to change Vim's cursor depending on the mod
 tags: vim, OS X
 ...
 
-A neat tricks I stumbled over in [iTerm2's
+A neat trick I stumbled over in [iTerm2's
 documentation](http://www.iterm2.com/#/section/documentation) is that one can
 change the cursor shape from the block (default) to a vertical bar. This is
 quite neat to do for Vim's insert mode where the cursor conceptually is
