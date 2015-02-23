@@ -78,7 +78,7 @@ main = hakyllWith conf $ do
 
 postCtx :: Tags -> Context String
 postCtx tags = modificationTimeField "mtime" "%U"
-                   <> dateField "date" "%e %B, %Y"
+                   <> dateField "date" "%e %b, %Y"
                    <> tagsField "prettytags" tags
                    <> defaultContext
 
