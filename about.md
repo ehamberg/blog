@@ -9,11 +9,7 @@ Portland, OR.
 I like to play around with [Haskell](http://www.haskell.org) and various other
 technologies. See my [projects](/projects.html) page for an overview.
 
-e-mail
-:   **erlendαhamberg.no**
-twitter
-:   [\@ehamberg](http://twitter.com/ehamberg)
-github
-:   [github.com/ehamberg](http://github.com/ehamberg)
-linkedin
-:   [no.linkedin.com/in/ehamberg/](http://no.linkedin.com/in/ehamberg/)
+- e-mail: **erlendαhamberg.no**
+- twitter: [\@ehamberg](http://twitter.com/ehamberg)
+- github: [github.com/ehamberg](http://github.com/ehamberg)
+- linkedin: [no.linkedin.com/in/ehamberg/](http://no.linkedin.com/in/ehamberg/)
