@@ -16,6 +16,4 @@ Executable blog
   Main-is:        blog.hs
   Ghc-options:    -Wall
 
-  Build-depends:
-    base      >= 4.6    && < 4.8,
-    hakyll    >= 4.5    && < 4.6
+  Build-depends: base, hakyll

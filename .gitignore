@@ -1,5 +1,4 @@
 _cache
 _site
 blog
-.cabal-sandbox
-cabal.sandbox.config
+.stack-work/

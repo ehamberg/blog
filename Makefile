@@ -1,11 +1,11 @@
 build:
-	cabal exec runhaskell blog.hs build
+	stack runghc blog.hs build
 
 preview:
-	cabal exec runhaskell blog.hs preview
+	stack runghc blog.hs preview
 
 deploy:
-	cabal exec runhaskell blog.hs deploy
+	stack runghc blog.hs deploy
 
 clean:
-	cabal exec runhaskell blog.hs clean
+	stack runghc blog.hs clean
