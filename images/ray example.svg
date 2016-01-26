@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="857px" height="643px" viewBox="0 0 857 643" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Ray Example</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <polygon id="Polygon-1" stroke="#000000" fill="#B8E986" sketch:type="MSShapeGroup" points="421.5 45 547.999999 138 587.999999 418 767.999999 218 607.999999 598 467.999999 458 427.999999 318 229.999999 498 38.9999987 397 106.999999 93 247.999999 271.5 "></polygon>
+        <path d="M408.5,392.5 L835.50116,392.5" id="Ray" stroke="#4990E2" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Ray-decoration-1" d="M835.50116,392.5 L824.70116,389.5 L824.70116,395.5 L835.50116,392.5 Z" stroke="#4990E2" stroke-width="5" stroke-linecap="square"></path>
+        <g id="X" sketch:type="MSLayerGroup" transform="translate(389.000000, 373.000000)" stroke="#D0011B" stroke-width="11" stroke-linecap="round">
+            <path d="M0.5,0.5 L38.4011879,38.4011879" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M38.5,0.5 L0.598812103,38.4011879" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="Highlighted" sketch:type="MSLayerGroup" transform="translate(428.000000, 138.000000)" stroke="#BD0FE1" stroke-opacity="0.504727129" stroke-width="10" stroke-linecap="round">
+            <path d="M120,0 L160,280" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M340,80 L160,280" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M0,180 L40,320" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M180,460 L340,80" id="Line" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
