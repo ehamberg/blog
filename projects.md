@@ -3,6 +3,23 @@
 Here are some of the projects I work on. A more comprehensive list is available
 on my [github accout](https://github.com/ehamberg/).
 
+## *How Much?*: A smart, offline currency converter
+
+A smart currency converter for iPhone/Apple watch that knows where you are and
+will convert the currency of the country you're vising to your “home currency”
+without you having to configure anything. I have written a [blog
+post](https://hamberg.no/erlend/posts/2015-10-22-geocoding.html) about the
+details of offline, reverse geocoding done by the app.
+
+![How Much? screenshot](images/howmuch.png)
+
+<div style="text-align: center; margin-top: 1em;">
+[![](images/appstore.png)](https://geo.itunes.apple.com/us/app/how-much-offline-currency/id999568678?mt=8)
+</div>
+
+- [Link](https://gethowmuch.com/)
+- [*Lobsters* discussion](https://lobste.rs/s/notli7/how_much_the_smart_offline_currency_converter_for_ios_and_watchos)
+
 ## 9m.no
 
 9m.no is a URL^[Technically:
