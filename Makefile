@@ -1,11 +1,12 @@
+STACK=stack --resolver=lts-5.2 runghc --package hakyll
 build:
-	stack runghc blog.hs build
+	$(STACK) blog.hs build
 
 preview:
-	stack runghc blog.hs preview
+	$(STACK) blog.hs preview
 
 deploy:
-	stack runghc blog.hs deploy
+	$(STACK) blog.hs deploy
 
 clean:
-	stack runghc blog.hs clean
+	$(STACK) blog.hs clean
