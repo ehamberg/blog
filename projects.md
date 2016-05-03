@@ -32,14 +32,14 @@ a (half) joke, but people really seem to like it.
 - [Code](https://github.com/ehamberg/9m)
 - [*Hacker News* discussion](https://news.ycombinator.com/item?id=7783239)
 
-## RSSQueue.com
+## ~~RSSQueue.com~~
 
-RSSQueue is a service that lets you create and curate RSS/podcast feeds that can
+~~RSSQueue is a service that lets you create and curate RSS/podcast feeds that can
 be synced to tablets or phones. This lets you create a “watch it later” list
 with content that is automatically downloaded, even to iOS devices where one
-usually cannot simply download e.g. a video file for later watching.
+usually cannot simply download e.g. a video file for later watching.~~
 
-- [Link](http://rssqueue.com)
+- [~~Link~~](http://rssqueue.com)
 - [Code](https://github.com/ehamberg/rssqueue)
 
 ## Circus Escape
