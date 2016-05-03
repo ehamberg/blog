@@ -7,11 +7,11 @@ tags: vim, OS X
 A neat trick I stumbled over in [iTerm2's
 documentation](http://www.iterm2.com/#/section/documentation) is that one can
 change the cursor shape from the block (default) to a vertical bar. This is
-quite neat to do for Vim's insert mode where the cursor conceptually is
-*between* characters. Adding the following to `~/.vimrc` [^1] will change the
-cursor to a vertical bar in insert mode and keep it as a block in the other
-modes. This should also work in Konsole, as far as I know, so if you use
-Konsole you should extend/replace the `$TERM_PROGRAM` check to look for Konsole.
+great to do for Vim's insert mode where the cursor conceptually is *between*
+characters. Adding the following to `~/.vimrc` [^1] will change the cursor to a
+vertical bar in insert mode and keep it as a block in the other modes. This
+should also work in Konsole, as far as I know, so if you use Konsole you should
+extend/replace the `$TERM_PROGRAM` check to look for Konsole.
 
 ```vim
 " Change cursor shape between insert and normal mode in iTerm2.app
