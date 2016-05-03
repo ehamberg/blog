@@ -100,5 +100,5 @@ feedConfiguration = FeedConfiguration
 
 conf :: Configuration
 conf = defaultConfiguration
-           { deployCommand = "rsync -cav _site/* hamberg.no:/srv/www/"
+           { deployCommand = "rsync -cav _site/* hamberg.no:/srv/www/erlend"
            }
