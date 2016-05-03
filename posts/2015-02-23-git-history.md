@@ -7,10 +7,10 @@ tags: git
 (I keep having to argue the case for merge commits in git, so this is a brief
 summary of my position I can point people to.)
 
-> tl;dr: **Never remove information!** Always merge branches with `git merge
---no-ff` to get a merge commit, and keep the "Conflicts" lines added by git.
-Only fast forward when pulling in remote changes to a branch with no local
-commits.
+> tl;dr: **~~Never~~Think hard before you remove information!** ~~Always~~You
+> should usually merge branches with `git merge --no-ff` to get a merge commit,
+> and keep the "Conflicts" lines added by git. Only fast forward when pulling
+> in remote changes to a branch with no local commits.
 
 I don't think this is very controversial anymore, but I'll start by presenting
 the case for merge commits anyway.
