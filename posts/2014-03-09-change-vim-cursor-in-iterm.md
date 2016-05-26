@@ -25,6 +25,10 @@ A screenshot of how this looks:
 
 ![iTerm2 cursor in Vim's insert and normal mode](/images/vim_cursors.png)
 
+> Addendum (2016-05-26):
+> You can achieve the same in [Neovim](https://neovim.io) by setting the
+> environment variable `NVIM_TUI_ENABLE_CURSOR_SHAPE` to `1`.
+
 [^1]: Or `~/.vim/vimrc` which in Vim 7.4 was finally added as a possible
 `vimrc` location, making it possible to gather all vim-related files in
 `~/.vim`.
