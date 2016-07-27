@@ -1,4 +1,4 @@
-STACK=stack --resolver=lts-5.2 runghc --package hakyll
+STACK=stack --resolver=lts-5.17 runghc --package hakyll
 build:
 	$(STACK) blog.hs build
 
